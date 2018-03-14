@@ -17,7 +17,7 @@
 
                 var $locationChangeStartUnbind = scope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
 
-                    if (form.$dirty) {
+                    if (form.$dirty && !form.$submitted) {
 
                         event.preventDefault();
 
